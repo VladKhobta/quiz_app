@@ -28,11 +28,9 @@ class QuestionService:
         question_count_left = body.count
 
         while question_count_left:  # cycle will work until required count of questions are saved to db
-            print(question_count_left)
             response = await self.get_questions(question_count_left)
 
             for item in response:
-                print(item["question"])
                 # checking if question is already in database
                 async with self.session.begin():
                     question_dal = QuestionDAL(self.session)

@@ -14,7 +14,6 @@ engine = create_async_engine(
     },
 )
 
-# noinspection PyTypeChecker
 async_session = sessionmaker(
     engine,
     expire_on_commit=False,

@@ -3,7 +3,6 @@ import uvicorn
 from fastapi import FastAPI, APIRouter
 
 from api import question_router
-import settings
 
 app = FastAPI(
     title="Quiz Service",
@@ -24,5 +23,5 @@ if __name__ == '__main__':
     uvicorn.run(
         app,
         host="127.0.0.1",
-        port=settings.APP_PORT,
+        port=8888,
     )
